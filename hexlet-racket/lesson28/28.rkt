@@ -1,0 +1,8 @@
+#lang racket
+
+(provide scroll-left)
+
+(define (scroll-left s)
+  (if (>= 1 (string-length s)) s
+      (string-append (substring s 1) 
+                     (substring s 0 1))))
